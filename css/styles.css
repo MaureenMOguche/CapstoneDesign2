@@ -29,7 +29,8 @@ nav {
     width: 100%;
     background-color: black;
     color: white;
-    padding: 1% 10%;
+    height:10vh;
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5%;
@@ -117,10 +118,12 @@ button:active {
     border: 2px solid var(--accent-color);
 }
 
+/*
 input[type=password]::-ms-reveal,
 input[type=password]::-ms-clear{
     display:none;
 }
+*/
 
 
 /* styling the icons */
@@ -222,6 +225,11 @@ footer a {
 /* mobile section */
 
 @media (max-width:768px) {
+    
+    body {
+        background-image: url("../images/mobile-bg.jpg");
+        background-size: cover;
+    }
     nav {
         padding:5%;
         position: relative;
@@ -232,7 +240,7 @@ footer a {
         height:100vh;
         background-color:black;
         position:fixed;
-        top:13%;
+        top:10vh;
         z-index: 2;
         transition:all .7s ease;
     }
@@ -259,6 +267,13 @@ footer a {
     .col-5, 
     .col-7{
         width: 100%;
+    }
+    
+    .col-5{
+        margin: 20% 0;
+    }
+    .col-7{
+        margin-bottom: 20%;
     }
 
     footer,

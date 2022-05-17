@@ -117,14 +117,19 @@ form.addEventListener('submit',(e)=> {
 
 // eye display password
 
-const seePassword = document.getElementsByClassName("bi-eye");
+const seePassword = document.getElementsById("p-eye");
 const closePassword = document.getElementsByClassName("bi-eye-slash");
 
 
 
-seePassword[0].addEventListener('click',()=>{
-    const type = seePassword[0].getAttribute("type")
-    type = 'text';
+seePassword.addEventListener('click',()=>{
+    if(password.type === 'password'){
+        password.setAttribute('type', 'text');
+        seePassword.classList.add('hide')
+    }
+    else{
+        password.setAttribute('type', 'text');
+    }
     
 })
 
